@@ -1,40 +1,40 @@
-# New Chapter Bakery & Projects Website
+# New Chapter Bakery & Projects – Professional Website (v2)
 
-Clean, modern, mobile-friendly website for **New Chapter Bakery & Projects (Pty) Ltd**.
+This is a clean, modern and mobile-friendly website built for **New Chapter Bakery & Projects (Pty) Ltd**.
 
-## Features
+## What is included
+
+- Official logo
 - Beautiful hero section with owner photo
-- Product showcase (Custard Scones, Mixed Muffins, Cakes)
-- Full Baking Class details with booking button
-- WhatsApp ordering links
-- Fully responsive (looks great on phone)
+- Full product range with prices:
+  - Snowballs (R8 / 3 for R20 / R600 per 20L)
+  - Custard Scones
+  - Mixed Muffins / Isipheko
+  - Heart-shaped cakes
+  - Celebration cakes
+  - Breads & rolls
+- Two baking classes:
+  - Birthday Cake Class (26 Sep 2026 – R800)
+  - Bread, Rolls & Sweet Buns Class (R1500 one-on-one)
+- **Order Calculator** – customers can select quantities and get total + WhatsApp order button
+- Customer reviews section
+- Full contact details + opening hours
+- Location: Taylor’s Halt (opposite Sasol garage)
 
-## How to put this on GitHub Pages (Free Hosting)
+## How to put it on GitHub Pages (Free)
 
-### Option 1 – Easiest way
-1. Create a free GitHub account at https://github.com
-2. Create a new repository (name it e.g. `new-chapter-bakery`)
-3. Upload all the files in this folder (`index.html`, `style.css`, and the 4 images)
-4. Go to **Settings → Pages**
-5. Under “Source”, choose **main** branch and **/ (root)**
-6. Click Save
-7. After 1–2 minutes your website will be live at:  
-   `https://yourusername.github.io/new-chapter-bakery`
+1. Create a new repository on GitHub
+2. Upload **all** the files in this folder
+3. Go to **Settings → Pages**
+4. Source = `main` branch + `/ (root)`
+5. Save – your site will be live in 1–2 minutes
 
-### Option 2 – Using GitHub Desktop
-You can also drag the whole folder into GitHub Desktop and publish it.
+Your website link will look like:  
+`https://yourusername.github.io/repository-name`
 
-## Files included
-- `index.html` – the website
-- `style.css` – the design
-- `owner.jpg` – photo of the baker
-- `scones.jpg` – custard scones flyer
-- `muffins.jpg` – mixed muffins photo
-- `class-flyer.jpg` – birthday cake class flyer
-
-## Contact
-WhatsApp / Call: **081 486 2460**  
-Location: Mpophomeni / Taylor’s Halt, Pietermaritzburg
+## Contact for the bakery
+**WhatsApp / Call:** 081 486 2460  
+**Location:** Taylor’s Halt, Pietermaritzburg (opposite Sasol garage)
 
 ---
-Made with ❤️ for New Chapter Bakery
+Made with care as a surprise for New Chapter Bakery ❤️
