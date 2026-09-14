@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Chapter Bakery & Projects | Freshly Baked with Love</title>
-  <meta name="description" content="New Chapter Bakery & Projects (Pty) Ltd – Homemade muffins, snowballs, custard scones, breads, celebration cakes and professional baking classes in Taylor's Halt, Pietermaritzburg. Call 081 486 2460.">
+  <meta name="description" content="New Chapter Bakery & Projects – Homemade snowballs, muffins, custard scones, breads, celebration cakes and baking classes in Taylor's Halt, Pietermaritzburg. Order on WhatsApp 081 486 2460.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,23 +14,25 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="container">
-      <div class="logo">
-        <img src="logo.jpg" alt="New Chapter Bakery Logo" class="logo-img">
-        <div class="logo-text">
-          <h1>New Chapter Bakery</h1>
-          <p>& Projects (Pty) Ltd</p>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#bakes">Our Bakes</a>
-        <a href="#classes">Classes</a>
-        <a href="#calculator">Order Calculator</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <img src="logo.png" alt="New Chapter Bakery" class="logo-img">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+      <nav class="nav" id="mainNav">
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#bakes" onclick="closeMenu()">Our Bakes</a>
+        <a href="#classes" onclick="closeMenu()">Classes</a>
+        <a href="#order" onclick="closeMenu()">Order Now</a>
+        <a href="#reviews" onclick="closeMenu()">Reviews</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
       </nav>
-      <a href="https://wa.me/27814862460" class="whatsapp-btn" target="_blank">💬 WhatsApp</a>
+
+      <a href="https://wa.me/27814862460?text=Hi%20New%20Chapter%20Bakery%2C%20I%20want%20to%20place%20an%20order" class="whatsapp-btn" target="_blank">
+        💬 Order on WhatsApp
+      </a>
     </div>
   </header>
 
@@ -38,173 +40,239 @@
   <section id="home" class="hero">
     <div class="container hero-content">
       <div class="hero-text">
-        <p class="eyebrow">Since 2024 • Taylor's Halt, PMB</p>
+        <p class="eyebrow">Since 2024 • Taylor's Halt, Pietermaritzburg</p>
         <h2>Every bite begins<br>a <span>new chapter</span>.</h2>
-        <p class="hero-desc">Freshly baked muffins, soft snowballs, custard scones, breads and beautiful celebration cakes — made with love every single day.</p>
+        <p class="hero-desc">Freshly baked snowballs, soft muffins, custard scones, breads and beautiful celebration cakes — made with love every day.</p>
+        
         <div class="hero-buttons">
-          <a href="#classes" class="btn btn-primary">Book a Baking Class</a>
-          <a href="https://wa.me/27814862460?text=Hi%20New%20Chapter%20Bakery%2C%20I%20would%20like%20to%20place%20an%20order" class="btn btn-outline" target="_blank">Order via WhatsApp</a>
+          <a href="#order" class="btn btn-primary">Order Now</a>
+          <a href="#classes" class="btn btn-outline">View Classes</a>
         </div>
-        <div class="hero-stats">
-          <div><strong>081 486 2460</strong><span>Call / WhatsApp</span></div>
-          <div><strong>Taylor's Halt</strong><span>Opposite Sasol Garage</span></div>
+
+        <div class="hero-info">
+          <div class="info-item">
+            <strong>081 486 2460</strong>
+            <span>WhatsApp / Call</span>
+          </div>
+          <div class="info-item">
+            <strong>Taylor's Halt</strong>
+            <span>Opposite Sasol Garage</span>
+          </div>
         </div>
       </div>
+
       <div class="hero-image">
-        <img src="owner2.jpg" alt="Nokukhanya Mbongwa - New Chapter Bakery">
+        <img src="owner2.jpg" alt="New Chapter Bakery">
         <div class="hero-badge">Fresh Daily ❤️</div>
       </div>
     </div>
   </section>
 
-  <!-- Trust strip -->
-  <section class="trust-strip">
-    <div class="container">
-      <div class="trust-item"><span>🧁</span> Made Fresh Daily</div>
-      <div class="trust-item"><span>❤️</span> Made with Love</div>
-      <div class="trust-item"><span>👩‍🍳</span> Baking Classes</div>
-      <div class="trust-item"><span>📍</span> Taylor's Halt, PMB</div>
-      <div class="trust-item"><span>📞</span> 081 486 2460</div>
+  <!-- Quick Benefits -->
+  <section class="benefits">
+    <div class="container benefits-grid">
+      <div class="benefit"><span>🧁</span> Made Fresh Daily</div>
+      <div class="benefit"><span>❤️</span> Made with Love</div>
+      <div class="benefit"><span>👩‍🍳</span> Baking Classes</div>
+      <div class="benefit"><span>📍</span> Taylor's Halt, PMB</div>
     </div>
   </section>
 
   <!-- Our Bakes -->
-  <section id="bakes" class="bakes">
+  <section id="bakes" class="section bakes">
     <div class="container">
       <div class="section-header">
         <h2>Our Bakes</h2>
-        <p>Soft, fluffy and made fresh every day with quality ingredients</p>
+        <p>Choose your favourites and order easily on WhatsApp</p>
       </div>
 
       <div class="products-grid">
         <!-- Snowballs -->
         <div class="product-card">
-          <img src="snowballs.jpg" alt="Snowballs">
-          <div class="product-info">
+          <div class="product-img">
+            <img src="snowballs.jpg" alt="Snowballs">
+          </div>
+          <div class="product-body">
             <h3>Snowballs</h3>
-            <p>Fresh cream or cream cheese filling • Soft & delicious</p>
-            <div class="price-list">
-              <div class="price-item"><span>1 snowball</span><strong>R8</strong></div>
-              <div class="price-item"><span>3 for</span><strong>R20</strong></div>
-              <div class="price-item"><span>20L box</span><strong>R600</strong></div>
-            </div>
-            <a href="https://wa.me/27814862460?text=Hi%2C%20I%20want%20to%20order%20Snowballs" class="btn btn-small" target="_blank">Order Now</a>
+            <p>Soft with fresh cream or cream cheese</p>
+            <ul class="prices">
+              <li><span>1 piece</span><strong>R8</strong></li>
+              <li><span>3 pieces</span><strong>R20</strong></li>
+              <li><span>20L box</span><strong>R600</strong></li>
+            </ul>
+            <a href="https://wa.me/27814862460?text=Hi%20New%20Chapter%20Bakery%2C%20I%20want%20to%20order%20Snowballs" class="btn btn-order" target="_blank">Order Snowballs</a>
           </div>
         </div>
 
         <!-- Custard Scones -->
         <div class="product-card">
-          <img src="scones.jpg" alt="Custard Scones">
-          <div class="product-info">
+          <div class="product-img">
+            <img src="scones.jpg" alt="Custard Scones">
+          </div>
+          <div class="product-body">
             <h3>Custard Scones</h3>
             <p>Soft & fluffy with rich custard filling</p>
-            <div class="price-list">
-              <div class="price-item"><span>4 scones</span><strong>R30</strong></div>
-              <div class="price-item"><span>12-inch box</span><strong>R300</strong></div>
-            </div>
-            <a href="https://wa.me/27814862460?text=Hi%2C%20I%20want%20to%20order%20Custard%20Scones" class="btn btn-small" target="_blank">Order Now</a>
+            <ul class="prices">
+              <li><span>4 scones</span><strong>R30</strong></li>
+              <li><span>12-inch box</span><strong>R300</strong></li>
+            </ul>
+            <a href="https://wa.me/27814862460?text=Hi%20New%20Chapter%20Bakery%2C%20I%20want%20to%20order%20Custard%20Scones" class="btn btn-order" target="_blank">Order Scones</a>
           </div>
         </div>
 
-        <!-- Mixed Muffins / Isipheko -->
+        <!-- Mixed Muffins -->
         <div class="product-card">
-          <img src="isipheko.jpg" alt="Mixed Muffins">
-          <div class="product-info">
+          <div class="product-img">
+            <img src="isipheko.jpg" alt="Mixed Muffins">
+          </div>
+          <div class="product-body">
             <h3>Isipheko / Mixed Muffins</h3>
-            <p>Chocolate, vanilla, banana, sprinkles & more</p>
-            <div class="price-list">
-              <div class="price-item"><span>From</span><strong>R350 – R450</strong></div>
-              <div class="price-item"><span>20L box</span><strong>R450</strong></div>
-            </div>
-            <a href="https://wa.me/27814862460?text=Hi%2C%20I%20want%20to%20order%20Mixed%20Muffins" class="btn btn-small" target="_blank">Order Now</a>
+            <p>Chocolate, vanilla, banana & more</p>
+            <ul class="prices">
+              <li><span>20L box from</span><strong>R350</strong></li>
+              <li><span>Mixed box</span><strong>R450</strong></li>
+            </ul>
+            <a href="https://wa.me/27814862460?text=Hi%20New%20Chapter%20Bakery%2C%20I%20want%20to%20order%20Mixed%20Muffins" class="btn btn-order" target="_blank">Order Muffins</a>
           </div>
         </div>
 
         <!-- Heart Cakes -->
         <div class="product-card">
-          <img src="heart-cake.jpg" alt="Heart Shaped Cakes">
-          <div class="product-info">
+          <div class="product-img">
+            <img src="heart-cake.jpg" alt="Heart Cakes">
+          </div>
+          <div class="product-body">
             <h3>Heart Shaped Cakes</h3>
-            <p>Beautiful custom heart cakes for any occasion</p>
-            <div class="price-list">
-              <div class="price-item"><span>Starting from</span><strong>R400</strong></div>
-            </div>
-            <a href="https://wa.me/27814862460?text=Hi%2C%20I%20want%20a%20quote%20for%20a%20heart%20cake" class="btn btn-small" target="_blank">Get Quote</a>
+            <p>Beautiful custom heart cakes</p>
+            <ul class="prices">
+              <li><span>Starting from</span><strong>R400</strong></li>
+            </ul>
+            <a href="https://wa.me/27814862460?text=Hi%20New%20Chapter%20Bakery%2C%20I%20want%20a%20quote%20for%20a%20heart%20cake" class="btn btn-order" target="_blank">Get Quote</a>
           </div>
         </div>
 
         <!-- Celebration Cakes -->
         <div class="product-card">
-          <img src="birthday-cake.jpg" alt="Celebration Cakes">
-          <div class="product-info">
+          <div class="product-img">
+            <img src="birthday-cake.jpg" alt="Celebration Cakes">
+          </div>
+          <div class="product-body">
             <h3>Celebration Cakes</h3>
-            <p>Birthday cakes, custom designs & cake slices</p>
-            <div class="price-list">
-              <div class="price-item"><span>Cake slices</span><strong>R20</strong></div>
-              <div class="price-item"><span>Custom cakes</span><strong>Quote</strong></div>
-            </div>
-            <a href="https://wa.me/27814862460?text=Hi%2C%20I%20want%20a%20quote%20for%20a%20celebration%20cake" class="btn btn-small" target="_blank">Get Quote</a>
+            <p>Birthday cakes & cake slices</p>
+            <ul class="prices">
+              <li><span>Cake slice</span><strong>R20</strong></li>
+              <li><span>Custom cakes</span><strong>Quote</strong></li>
+            </ul>
+            <a href="https://wa.me/27814862460?text=Hi%20New%20Chapter%20Bakery%2C%20I%20want%20a%20quote%20for%20a%20cake" class="btn btn-order" target="_blank">Get Quote</a>
           </div>
         </div>
 
         <!-- Breads -->
         <div class="product-card">
-          <img src="bread.jpg" alt="Fresh Breads">
-          <div class="product-info">
+          <div class="product-img">
+            <img src="bread.jpg" alt="Fresh Breads">
+          </div>
+          <div class="product-body">
             <h3>Breads & Rolls</h3>
-            <p>Fresh loaves, bread rolls and sweet buns</p>
-            <div class="price-list">
-              <div class="price-item"><span>Daily fresh</span><strong>Ask</strong></div>
-            </div>
-            <a href="https://wa.me/27814862460?text=Hi%2C%20I%20want%20to%20order%20bread" class="btn btn-small" target="_blank">Order Now</a>
+            <p>Fresh loaves, rolls and sweet buns</p>
+            <ul class="prices">
+              <li><span>Daily fresh</span><strong>Ask price</strong></li>
+            </ul>
+            <a href="https://wa.me/27814862460?text=Hi%20New%20Chapter%20Bakery%2C%20I%20want%20to%20order%20bread" class="btn btn-order" target="_blank">Order Bread</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Baking Classes -->
-  <section id="classes" class="classes">
+  <!-- Easy Order Section -->
+  <section id="order" class="section order-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Easy Order</h2>
+        <p>Select what you want → Get total → Send on WhatsApp</p>
+      </div>
+
+      <div class="order-box">
+        <div class="order-items">
+          <div class="order-row">
+            <label>Snowballs (R8 each)</label>
+            <input type="number" id="q-snow" min="0" value="0" oninput="updateOrder()">
+          </div>
+          <div class="order-row">
+            <label>Snowballs 3-pack (R20)</label>
+            <input type="number" id="q-snow3" min="0" value="0" oninput="updateOrder()">
+          </div>
+          <div class="order-row">
+            <label>Custard Scones 4-pack (R30)</label>
+            <input type="number" id="q-scones" min="0" value="0" oninput="updateOrder()">
+          </div>
+          <div class="order-row">
+            <label>Mixed Muffins 20L (R450)</label>
+            <input type="number" id="q-muffins" min="0" value="0" oninput="updateOrder()">
+          </div>
+          <div class="order-row">
+            <label>Snowballs 20L Box (R600)</label>
+            <input type="number" id="q-snowbox" min="0" value="0" oninput="updateOrder()">
+          </div>
+          <div class="order-row">
+            <label>Cake Slices (R20 each)</label>
+            <input type="number" id="q-slices" min="0" value="0" oninput="updateOrder()">
+          </div>
+        </div>
+
+        <div class="order-summary">
+          <p class="summary-label">Estimated Total</p>
+          <h3 id="orderTotal">R0</h3>
+          <a id="waOrderBtn" href="https://wa.me/27814862460" class="btn btn-primary btn-large" target="_blank">
+            Send Order on WhatsApp
+          </a>
+          <p class="note">Prices may vary slightly. We will confirm the final total with you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes -->
+  <section id="classes" class="section classes">
     <div class="container">
       <div class="section-header light">
         <h2>Baking Classes</h2>
-        <p>Learn to bake like a pro — take everything home + certificate</p>
+        <p>Learn, bake and take everything home</p>
       </div>
 
       <div class="classes-grid">
-        <!-- Birthday Cake Class -->
         <div class="class-card">
           <img src="class-flyer.jpg" alt="Birthday Cake Class">
           <div class="class-body">
             <span class="badge">One Day Class</span>
             <h3>Birthday Cake Class</h3>
-            <p class="class-date">📅 26 September 2026</p>
-            <p class="class-price">R800 <small>per person</small></p>
-            <p class="deposit">R400 deposit confirms booking</p>
+            <p class="date">📅 26 September 2026</p>
+            <p class="price">R800 <small>per person</small></p>
+            <p class="deposit">R400 deposit to confirm</p>
             <ul>
               <li>Measuring ingredients correctly</li>
-              <li>Baking, beating cream & covering cake</li>
-              <li>Cake decorating & piping techniques</li>
+              <li>Baking, cream & covering cake</li>
+              <li>Decorating & piping techniques</li>
               <li>Also make: Scones, Snowballs, Muffins, Biscuits</li>
-              <li>Certificate of Attendance + take home all baked goods</li>
+              <li>Certificate + take home all your bakes</li>
             </ul>
             <a href="https://wa.me/27814862460?text=Hi%20New%20Chapter%20Bakery%2C%20I%20want%20to%20book%20the%20Birthday%20Cake%20Class%20on%2026%20September%202026" class="btn btn-primary" target="_blank">Book This Class</a>
           </div>
         </div>
 
-        <!-- Bread Making Class -->
         <div class="class-card">
           <img src="bread-class.jpg" alt="Bread Making Class">
           <div class="class-body">
             <span class="badge">One-on-One Special</span>
-            <h3>Breads, Rolls & Sweet Buns Class</h3>
-            <p class="class-date">📅 Flexible dates</p>
-            <p class="class-price">R1 500 <small>per person</small></p>
-            <p class="deposit">Full attention • Recipes, tricks & tips included</p>
+            <h3>Breads, Rolls & Sweet Buns</h3>
+            <p class="date">📅 Flexible dates</p>
+            <p class="price">R1 500 <small>per person</small></p>
+            <p class="deposit">Full attention • Recipes included</p>
             <ul>
               <li>Bread making from scratch</li>
               <li>Bread rolls & sweet buns</li>
-              <li>Recipes + professional tips</li>
+              <li>Professional tips & tricks</li>
               <li>One-on-one attention</li>
               <li>Take home what you bake</li>
             </ul>
@@ -215,158 +283,122 @@
     </div>
   </section>
 
-  <!-- Order Calculator -->
-  <section id="calculator" class="calculator">
-    <div class="container">
-      <div class="section-header">
-        <h2>Quick Order Calculator</h2>
-        <p>Select items and see the total instantly — then order via WhatsApp</p>
-      </div>
-
-      <div class="calc-box">
-        <div class="calc-items">
-          <div class="calc-item">
-            <label>Snowballs (R8 each)</label>
-            <input type="number" id="snowballs" min="0" value="0" oninput="calculateTotal()">
-          </div>
-          <div class="calc-item">
-            <label>Snowballs 3-pack (R20)</label>
-            <input type="number" id="snowballs3" min="0" value="0" oninput="calculateTotal()">
-          </div>
-          <div class="calc-item">
-            <label>Custard Scones (R30 for 4)</label>
-            <input type="number" id="scones" min="0" value="0" oninput="calculateTotal()">
-          </div>
-          <div class="calc-item">
-            <label>Mixed Muffins 20L (R450)</label>
-            <input type="number" id="muffins" min="0" value="0" oninput="calculateTotal()">
-          </div>
-          <div class="calc-item">
-            <label>Snowballs 20L Box (R600)</label>
-            <input type="number" id="snowbox" min="0" value="0" oninput="calculateTotal()">
-          </div>
-          <div class="calc-item">
-            <label>Cake Slices (R20 each)</label>
-            <input type="number" id="slices" min="0" value="0" oninput="calculateTotal()">
-          </div>
-        </div>
-
-        <div class="calc-result">
-          <p>Estimated Total</p>
-          <h3 id="total">R0</h3>
-          <a id="whatsappOrder" href="https://wa.me/27814862460" class="btn btn-primary btn-large" target="_blank">
-            Send Order on WhatsApp
-          </a>
-          <p class="calc-note">Prices may vary • Confirm final total with us</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Reviews -->
-  <section id="reviews" class="reviews">
+  <section id="reviews" class="section reviews">
     <div class="container">
       <div class="section-header">
-        <h2>What Customers Say</h2>
-        <p>Real love from our bakers and customers</p>
+        <h2>Customer Love</h2>
+        <p>What people say about New Chapter Bakery</p>
       </div>
       <div class="reviews-grid">
         <div class="review-card">
           <div class="stars">★★★★★</div>
-          <p>"The snowballs are soft and the cream is so fresh. I always order the 20L box!"</p>
-          <span class="reviewer">— Happy Customer, PMB</span>
+          <p>"The snowballs are soft and the cream is so fresh. I always order the big box!"</p>
+          <span>— Happy Customer, PMB</span>
         </div>
         <div class="review-card">
           <div class="stars">★★★★★</div>
           <p>"Best custard scones in Taylor's Halt. Soft and full of filling. Highly recommended."</p>
-          <span class="reviewer">— Local Customer</span>
+          <span>— Local Customer</span>
         </div>
         <div class="review-card">
           <div class="stars">★★★★★</div>
-          <p>"I booked the cake class and it was amazing. I left with my own cake and certificate!"</p>
-          <span class="reviewer">— Class Student</span>
+          <p>"I booked the cake class and it was amazing. I left with my own cake and a certificate!"</p>
+          <span>— Class Student</span>
         </div>
         <div class="review-card">
           <div class="stars">★★★★★</div>
           <p>"Beautiful heart-shaped cakes and the muffins are always fresh. Support local!"</p>
-          <span class="reviewer">— Regular Client</span>
+          <span>— Regular Client</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact">
+  <section id="contact" class="section contact">
     <div class="container">
       <div class="section-header">
         <h2>Visit Us or Order</h2>
-        <p>We are open and ready to bake for you</p>
+        <p>We are ready to bake for you</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-card">
-          <div class="contact-icon">📱</div>
+          <div class="icon">📱</div>
           <h3>WhatsApp / Call</h3>
-          <p class="big-number"><a href="https://wa.me/27814862460">081 486 2460</a></p>
+          <p class="phone"><a href="https://wa.me/27814862460">081 486 2460</a></p>
           <a href="https://wa.me/27814862460" class="btn btn-primary" target="_blank">Chat Now</a>
         </div>
         <div class="contact-card">
-          <div class="contact-icon">📍</div>
+          <div class="icon">📍</div>
           <h3>Location</h3>
-          <p>Taylor's Halt, Pietermaritzburg<br>
-          Opposite Sasol Garage<br>
-          (eShowe side)</p>
+          <p>Taylor's Halt<br>Pietermaritzburg<br>Opposite Sasol Garage</p>
         </div>
         <div class="contact-card">
-          <div class="contact-icon">🕒</div>
+          <div class="icon">🕒</div>
           <h3>Opening Hours</h3>
-          <p>Mon – Fri: 07:30 – 17:00<br>
+          <p>Mon–Fri: 07:30 – 17:00<br>
           Sat & Sun: 08:00 – 17:00<br>
           Public Holidays: 08:00 – 16:00</p>
         </div>
       </div>
 
       <div class="final-cta">
-        <img src="logo.jpg" alt="Logo" class="final-logo">
+        <img src="logo.png" alt="New Chapter Bakery" class="final-logo">
         <h3>New Chapter Bakery & Projects (Pty) Ltd</h3>
         <p>Every bite begins a new chapter. Freshly baked with love ❤️</p>
-        <a href="https://wa.me/27814862460" class="btn btn-primary btn-large" target="_blank">Order or Book a Class Now</a>
+        <a href="https://wa.me/27814862460?text=Hi%20New%20Chapter%20Bakery%2C%20I%20want%20to%20place%20an%20order" class="btn btn-primary btn-large" target="_blank">
+          Order or Book a Class Now
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 New Chapter Bakery & Projects (Pty) Ltd • Taylor's Halt, Pietermaritzburg</p>
-      <p class="footer-tagline">Made with ❤️ for our community</p>
+      <p>© 2026 New Chapter Bakery & Projects (Pty) Ltd</p>
+      <p class="small">Taylor's Halt, Pietermaritzburg • 081 486 2460</p>
     </div>
   </footer>
 
   <script>
-    function calculateTotal() {
-      const snowballs = parseInt(document.getElementById('snowballs').value) || 0;
-      const snowballs3 = parseInt(document.getElementById('snowballs3').value) || 0;
-      const scones = parseInt(document.getElementById('scones').value) || 0;
-      const muffins = parseInt(document.getElementById('muffins').value) || 0;
-      const snowbox = parseInt(document.getElementById('snowbox').value) || 0;
-      const slices = parseInt(document.getElementById('slices').value) || 0;
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
 
-      const total = (snowballs * 8) + (snowballs3 * 20) + (scones * 30) + (muffins * 450) + (snowbox * 600) + (slices * 20);
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+      menuToggle.textContent = mainNav.classList.contains('open') ? '✕' : '☰';
+    });
 
-      document.getElementById('total').textContent = 'R' + total.toLocaleString();
+    function closeMenu() {
+      mainNav.classList.remove('open');
+      menuToggle.textContent = '☰';
+    }
 
-      // Build WhatsApp message
-      let message = 'Hi New Chapter Bakery, I would like to order:%0A';
-      if (snowballs > 0) message += `• ${snowballs} Snowball(s) (R8 each)%0A`;
-      if (snowballs3 > 0) message += `• ${snowballs3} x 3-pack Snowballs (R20)%0A`;
-      if (scones > 0) message += `• ${scones} x Custard Scones 4-pack (R30)%0A`;
-      if (muffins > 0) message += `• ${muffins} x Mixed Muffins 20L (R450)%0A`;
-      if (snowbox > 0) message += `• ${snowbox} x Snowballs 20L Box (R600)%0A`;
-      if (slices > 0) message += `• ${slices} Cake Slice(s) (R20)%0A`;
-      message += `%0AEstimated Total: R${total}`;
+    // Order calculator
+    function updateOrder() {
+      const snow = parseInt(document.getElementById('q-snow').value) || 0;
+      const snow3 = parseInt(document.getElementById('q-snow3').value) || 0;
+      const scones = parseInt(document.getElementById('q-scones').value) || 0;
+      const muffins = parseInt(document.getElementById('q-muffins').value) || 0;
+      const snowbox = parseInt(document.getElementById('q-snowbox').value) || 0;
+      const slices = parseInt(document.getElementById('q-slices').value) || 0;
 
-      document.getElementById('whatsappOrder').href = `https://wa.me/27814862460?text=${message}`;
+      const total = (snow * 8) + (snow3 * 20) + (scones * 30) + (muffins * 450) + (snowbox * 600) + (slices * 20);
+      document.getElementById('orderTotal').textContent = 'R' + total.toLocaleString();
+
+      let msg = 'Hi New Chapter Bakery, I would like to order:%0A%0A';
+      if (snow > 0) msg += `• ${snow} Snowball(s) @ R8 = R${snow * 8}%0A`;
+      if (snow3 > 0) msg += `• ${snow3} x 3-pack Snowballs @ R20 = R${snow3 * 20}%0A`;
+      if (scones > 0) msg += `• ${scones} x Custard Scones (4-pack) @ R30 = R${scones * 30}%0A`;
+      if (muffins > 0) msg += `• ${muffins} x Mixed Muffins 20L @ R450 = R${muffins * 450}%0A`;
+      if (snowbox > 0) msg += `• ${snowbox} x Snowballs 20L Box @ R600 = R${snowbox * 600}%0A`;
+      if (slices > 0) msg += `• ${slices} Cake Slice(s) @ R20 = R${slices * 20}%0A`;
+      msg += `%0AEstimated Total: R${total}%0A%0APlease confirm. Thank you!`;
+
+      document.getElementById('waOrderBtn').href = `https://wa.me/27814862460?text=${msg}`;
     }
   </script>
 </body>
